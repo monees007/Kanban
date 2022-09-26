@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kanban</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/custom_validations.js') }}"></script>
+
+
+    <!--    Auxilillary-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style>
+        .ii {
+            vertical-align: middle;
+
+            line-height: 39px;
+            font-size: 28px !important;
+
+
+        }
+
+
+        .pe:hover .ij {
+            display: inline
+        }
+
+
+        .ij {
+            display: none;
+        }
+
+        :root {
+            --status: n
+        }
+
+
+        .xcard {
+            margin: 20px;
+            background: #AEA79F;
+            color: #111111;
+            font-family: "JetBrains Mono", monospace;
+            padding: 40px;
+            position: absolute;
+            border-radius: 25px;
+            width: 44%;
+            height: 90%;
+            top: 0;
+
+        }
+
+        input[type="radio"] {
+        -webkit-appearance: none;
+        }
+
+        input[type="radio"]:not(:checked) + label > div > i {
+            color: #1a1e21;
+        {#background: black !important;#}
+        }
+
+        input[type="radio"]:checked + label > div > #fin {
+            color: #0dbf0d;
+        }
+
+        input[type="radio"]:checked + label > div > #pen {
+            color: #ff0000;
+        }
+
+        input[type="radio"]:checked + label > div > #ong {
+            color: dodgerblue;
+        }
+
+        #fin:hover {
+            color: #0dbf0d;
+        }
+
+        #pen:hover {
+            color: #ff0000;
+        }
+
+        #ong:hover {
+            color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Kanban</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <h3 class="display-7">Not Started</h3>
+        </div>
+        <div class="col-sm">
+            <h3 class="display-7">Ongoing</h3>
+        </div>
+        <div class="col-sm">
+            <h3 class="display-7">Completed</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+            <div class="row">
+                <h4 class="btn-light"> item 1</h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div>
+    <div class="card xcard">
+
+
+        <form>
+
+            <span>
+                 <i class="material-icons">close</i>
+
+                <input style="background: none;border: 0" type="reset" value=""/>
+            </span>
+
+
+            <label>
+                <input class="h2" value="Pink Ostrich"
+                       style="font-family:'Mono',ui-monospace; background: none; border:0" type="text" name="title">
+            </label>
+
+            <label>
+                <input style="background:none;height:43px; border:0;color: #333333; text-after-overflow:fold"
+                       value="why dont you think of a cool,\n shiny and OK day." type="text" name="content">
+            </label>
+
+            <div style="border: 23px black;width:265px;height: 40px;padding-top:0px;padding-left: 23px; background:#5e2750;color: #ffffff; border-radius:20px;">
+                <div class="ast row">
+                    <span>Status |</span>
+                    <div class="pe" style="display: inline">
+                        <i id="pen" style="color: #ff0000;" class="ii material-icons">dangerous </i>
+                        <span id="pend" class="ij">Pending</span>
+
+                    </div>
+                    <div class="pe" style="display: inline">
+
+                        <i id="ong" style="color: dodgerblue;" class="ii material-icons">not_started</i>
+                        <span id="ongo" class="ij">Ongoing</span>
+                    </div>
+                    <div class="pe" style="display: inline">
+                        <i id="fin" style="color: #0dbf0d;" class="ii material-icons">offline_pin</i>
+                        <span id="fini" class="ij">Finished</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="border: 23px black;width:295px;height: 40px;padding-top:0px;padding-left: 23px; background:#5e2750;color: #ffffff; border-radius:20px;">
+                <div class="ast row">
+                    <span>Status |</span>
+                    <input type="radio" id="test1" name="radio-group">
+                    <label for="test1">
+                        <div class="pe" style="display: inline">
+                            <i id="pen" class="ii material-icons">dangerous </i>
+                            <span id="pend" class="ij">Pending</span>
+
+                        </div>
+                    </label>
+                    <input type="radio" id="test2" name="radio-group">
+                    <label for="test2">
+                        <div class="pe" style="display: inline">
+
+                            <i id="ong" class="ii material-icons">not_started</i>
+                            <span id="ongo" class="ij">Ongoing</span>
+                        </div>
+                    </label>
+                    <input type="radio" id="test3" name="radio-group">
+                    <label for="test3">
+                        <div class="pe" style="display: inline">
+                            <i id="fin" class="ii material-icons">offline_pin</i>
+                            <span id="fini" class="ij">Finished</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+
+            <label> Deadline
+                <input type="date" name="deadline">
+            </label>
+
+            <input type="submit" value="Detele">
+
+
+        </form>
+    </div>
+</div>
+<button class="fab btn" style="position: relative; top: 60vh; margin-left: 50vh;" type="button"><i
+        class="material-icons pmd-sm">add</i></button>
+
+
+</body>
+</html>
