@@ -1,3 +1,121 @@
-.fab{
-    background: ;
+.fab {
+    background: #AEA79F;
+    color: #111111;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    height: 40px;
+    width: 20%;
+    padding-top: 20px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    justify-content: center;
+    elevation: higher;
+}
+.bab{
+    background: #AEA79F;
+    color: #111111;
+    position: relative;
+    bottom: 0;
+    left: 35%;
+    height: 35px;
+    width: 30%;
+    padding-top: 10px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    justify-content: center;
+    elevation: higher;
+}
+.sub-header {
+    padding-top: 5px;
+    padding-left: 2%;
+    color: #f7f7f7;
+    background: #272726;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 27px;
+}
+
+body {
+    font-family: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    background: #8e8479;
+}
+.slink{
+    color: #ffffff;
+    font-size: 18px;
+}
+.header {
+    position: absolute;
+
+    font-size: 1.4rem;
+    top: 27px;
+    left: 0;
+    width: 90%;
+    background: #e95420;
+    color: #ffffff;
+
+    padding: 15px 5% 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.sheet{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.leaf{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    border-radius: 25px;
+    border-width: 12px;
+    display: flex;
+    flex-direction: column;
+
+    border: solid #1a1e21;
+}
+.title{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+.btns{
+    display: inline-flex;
+}
+hr{
+    width: 100%;
+    padding: 0px;
+    color: white;
+}
+.l-card{
+
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px;
+
+
+
+
+
+}
+.inb{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.stts{
+    border-radius: inherit;
+    color: white;
+    display: inline-flex;
+    margin-top: -10px;
+    font-size: 12px;
+
 }

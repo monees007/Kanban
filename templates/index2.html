@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="../static/style.css" type="text/css"/>
     <link rel="stylesheet" href="../static/statusbar.css" type="text/css"/>
     <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Ubuntu">
+    <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
 </head>
 <body>
-<form class="xcard">
-    <div><div class="closebar">
-        <input type="submit" class="btn" id="btn_rst">
-        <label class="set1" for="btn_rst">
-            <span class="btn-lbl">Exit Without Saving</span>
-            <span id="icon-off" class="btnicn material-symbols-outlined">cancel</span>
-        </label>
+<form style="display: none" class="xcard">
+    <div>
+        <div class="closebar">
+            <input type="submit" class="btn" id="btn_rst">
+            <label class="set1" for="btn_rst">
+                <span class="btn-lbl">Exit Without Saving</span>
+                <span id="icon-off" class="btnicn material-symbols-outlined">cancel</span>
+            </label>
 
-        <input type="submit" class="btn" id="btn_sbmt">
-        <label class="set1" for="btn_sbmt">
-            <span class="btn-lbl"> Save and Exit</span>
-            <span class="btnicn material-symbols-outlined">check_circle</span>
-        </label>
-    </div>
-    <input class="sticker" type="text" id="title" value="title"/></div>
+            <input type="submit" class="btn" id="btn_sbmt">
+            <label class="set1" for="btn_sbmt">
+                <span class="btn-lbl"> Save and Exit</span>
+                <span class="btnicn material-symbols-outlined">check_circle</span>
+            </label>
+        </div>
+        <input class="sticker" type="text" id="title" value="title"/></div>
 
-    <textarea class="sticker" type="text" rows="6" id="discription">once there was a happy king he was happy happy</textarea>
+    <textarea class="sticker" type="text" rows="6"
+              id="discription">once there was a happy king he was happy happy</textarea>
     <div class="statusbar ast">
         <span>Status |</span>
         <input type="radio" id="test1" name="radio-group">
@@ -69,8 +73,64 @@
 
 
 </form>
-<div class="fab">
+<div class="sub-header"> Kanban by monees007</div>
+<div class="header">
+    Hi Simaalee
+    <a class="slink" href="/login">Sign in</a>
+</div>
+<div class="sheet">
+    <div class="leaf">
+        <span class="title">Energise your engineers</span>
+        <hr>
+        <div class="l-card">
+            <div class="inb">
+                <div class="stts">
+                    <i class="material-symbols-outlined">dangerous </i>
+                    <span>Pending | Two days remaining</span>
 
+                </div>
+                <span>Feed the dog</span>
+            </div>
+
+
+            <div class="btns">
+
+                <div><span class="material-symbols-outlined">edit</span></div>
+                <div><span class="material-symbols-outlined">delete</span></div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="l-card">
+
+            <span>Eat the apple</span>
+            <div class="stts">
+                <i class="material-symbols-outlined">dangerous </i>
+                <span>Pending</span>
+            </div>
+            <div class="btns">
+
+                <div><span class="material-symbols-outlined">edit</span></div>
+                <div><span class="material-symbols-outlined">delete</span></div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="bab">
+            <span class="material-symbols-outlined">add</span>
+        </div>
+    </div>
+    <div class="leaf">
+        Energise your engineers
+        Better security. More packages. Newer tools. All your open source, from cloud to edge.
+
+        66% of experienced developers prefer Ubuntu.
+
+        That’s why Ubuntu supports the fastest, biggest and most successful digital operations.
+    </div>
+</div>
+<div class="fab">
+    <span class="material-symbols-outlined">add</span>
 </div>
 </body>
 </html>
