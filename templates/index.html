@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kanban</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
     <script type="text/javascript" src="{{ url_for('static', filename='js/custom_validations.js') }}"></script>
@@ -21,30 +23,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <style>
-        .ii {
-            vertical-align: middle;
-
-            line-height: 39px;
-            font-size: 28px !important;
-
-
-        }
-
-
-        .pe:hover .ij {
-            display: inline
-        }
-
-
-        .ij {
-            display: none;
-        }
-
-        :root {
-            --status: n
-        }
-
-
         .xcard {
             margin: 20px;
             background: #AEA79F;
@@ -59,14 +37,58 @@
 
         }
 
+        .ii {
+            vertical-align: middle;
+            line-height: 39px;
+            font-size: 28px !important;
+        }
+
+        .bb {
+            vertical-align: middle;
+            line-height: 39px;
+            font-size: 30px !important;
+            font-variation-settings: 'FILL' 1,
+            'wght' 350,
+            'GRAD' 0,
+            'opsz' 48
+
+        }
+        .bst:hover{
+            width: 229px !important;
+        }
+        .bst:hover #2btn {
+            display: inline !important;
+        }
+
+        .ij {
+            display: none;
+        }
+
+        input[type="radio"]:hover .ij {
+            display: none;
+        }
+
+        .pe:hover .ij {
+            display: inline
+        }
+
+        .ast:not(:hover) input[type="radio"]:checked + label > div > span {
+            display: inline;
+        }
+
+
         input[type="radio"] {
-        -webkit-appearance: none;
+            -webkit-appearance: none;
+        }
+        .tabitems {
+            display: none;
         }
 
         input[type="radio"]:not(:checked) + label > div > i {
             color: #1a1e21;
         {#background: black !important;#}
         }
+
 
         input[type="radio"]:checked + label > div > #fin {
             color: #0dbf0d;
@@ -91,6 +113,14 @@
         #ong:hover {
             color: dodgerblue;
         }
+        .tab:hover {
+            width: 78px !important;
+        }
+        .tab:hover .lbl {
+            display: inline !important;
+        }
+
+        .bst
     </style>
 </head>
 <body>
@@ -160,6 +190,43 @@
 
                 <input style="background: none;border: 0" type="reset" value=""/>
             </span>
+             <div class="bst row" style="border: 23px black;width:40px;height: 40px;padding-left: 5px; background:#e95420;color: #ffffff; border-radius:20px;">
+
+
+                    <input type="button" id="tes1" class="tabitems">
+                    <label for="tes1">
+                        <div class="pe" style="display: inline">
+                           <span class="bb material-symbols-outlined">check_circle</span>
+                            <span id="pend" class="ij">Save snd Exit</span>
+
+                        </div>
+                    </label>
+                    <input type="button" id="tes2" class="tabitems">
+                    <label for="tes 2" id="2btn" style="display: inline-block">
+                        <div class="pe" >
+                            <span class="bb material-symbols-outlined">cancel</span>
+                            <span id="ongo">Exit Without Saving</span>
+                        </div>
+                    </label>
+
+
+            </div>
+            <div class="tab row w78"
+                 style="border: 23px black;width:40px;height: 40px;padding-inline: 4px; background:#e95420;color: #ffffff; border-radius:20px;">
+                <span style="display: none" class="lbl">
+                    <span class="bb material-symbols-outlined">check_circle</span>
+                                        <span style="display: none" class="lbl">Save and Exit</span>
+
+                    <input style="display:none;background: none;vertical-align:baseline;border: 0" type="reset"
+                           value=""/>
+                </span>
+                <span>
+                    <span class="bb material-symbols-outlined">cancel</span>
+                    <span style="display: none" class="lbl">Exit Without Saving</span>
+                    <input style="background: none;border: 0" type="reset" value=""/>
+                 </span>
+            </div>
+
 
 
             <label>
@@ -172,25 +239,6 @@
                        value="why dont you think of a cool,\n shiny and OK day." type="text" name="content">
             </label>
 
-            <div style="border: 23px black;width:265px;height: 40px;padding-top:0px;padding-left: 23px; background:#5e2750;color: #ffffff; border-radius:20px;">
-                <div class="ast row">
-                    <span>Status |</span>
-                    <div class="pe" style="display: inline">
-                        <i id="pen" style="color: #ff0000;" class="ii material-icons">dangerous </i>
-                        <span id="pend" class="ij">Pending</span>
-
-                    </div>
-                    <div class="pe" style="display: inline">
-
-                        <i id="ong" style="color: dodgerblue;" class="ii material-icons">not_started</i>
-                        <span id="ongo" class="ij">Ongoing</span>
-                    </div>
-                    <div class="pe" style="display: inline">
-                        <i id="fin" style="color: #0dbf0d;" class="ii material-icons">offline_pin</i>
-                        <span id="fini" class="ij">Finished</span>
-                    </div>
-                </div>
-            </div>
             <br>
             <div style="border: 23px black;width:295px;height: 40px;padding-top:0px;padding-left: 23px; background:#5e2750;color: #ffffff; border-radius:20px;">
                 <div class="ast row">

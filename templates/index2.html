@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KanBan</title>
+    <link rel="stylesheet" href="../static/card.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/style.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/statusbar.css" type="text/css"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+<form class="xcard">
+    <div><div class="closebar">
+        <input type="submit" class="btn" id="btn_rst">
+        <label class="set1" for="btn_rst">
+            <span class="btn-lbl">Exit Without Saving</span>
+            <span id="icon-off" class="btnicn material-symbols-outlined">cancel</span>
+        </label>
+
+        <input type="submit" class="btn" id="btn_sbmt">
+        <label class="set1" for="btn_sbmt">
+            <span class="btn-lbl"> Save and Exit</span>
+            <span class="btnicn material-symbols-outlined">check_circle</span>
+        </label>
+    </div>
+    <input class="sticker" type="text" id="title" value="title"/></div>
+
+    <textarea class="sticker" type="text" rows="6" id="discription">once there was a happy king he was happy happy</textarea>
+    <div class="statusbar ast">
+        <span>Status |</span>
+        <input type="radio" id="test1" name="radio-group">
+        <label for="test1">
+            <div class="pe" style="display: inline">
+                <i id="pen" class="ii material-symbols-outlined">dangerous </i>
+                <span id="pend" class="ij">Pending</span>
+
+            </div>
+        </label>
+        <input type="radio" id="test2" name="radio-group">
+        <label for="test2">
+            <div class="pe" style="display: inline">
+
+                <i id="ong" class="ii material-symbols-outlined">not_started</i>
+                <span id="ongo" class="ij">Ongoing</span>
+            </div>
+        </label>
+        <input type="radio" id="test3" name="radio-group">
+        <label for="test3">
+            <div class="pe" style="display: inline">
+                <i id="fin" class="ii material-symbols-outlined">offline_pin</i>
+                <span id="fini" class="ij">Finished</span>
+            </div>
+        </label>
+    </div>
+    <div class="sticker">
+        <label>
+            Deadline
+            <input type="datetime-local"/>
+        </label>
+    </div>
+    <div class="sticker">
+        <label>Parent List
+            <select id="plist">
+                <option value=""> Parent List</option>
+            </select>
+        </label>
+    </div>
+
+
+</form>
+<div class="fab">
+
+</div>
+</body>
+</html>
