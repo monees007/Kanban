@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d4ddcf8-36d9-43d3-ab81-6ef9407b5cf5" name="Changes" comment="List Implemented.&#10;Overall UI defined">
-      <change afterPath="$PROJECT_DIR$/model/db.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="0d4ddcf8-36d9-43d3-ab81-6ef9407b5cf5" name="Changes" comment="login screen done">
+      <change afterPath="$PROJECT_DIR$/.idea/Kanban.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/site-background-image.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/base.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/base.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/base.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="4a5f29be-10cd-4d7e-a4a6-ef24e71b40be" value="Orange" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,16 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/monees007/Documents/ADBFileExplorer-master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/monees007/Documents/ADBFileExplorer-master",
+    "settings.editor.selected.configurable": "vcs.Git"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/database" />
@@ -106,7 +118,7 @@
       <workItem from="1663911471301" duration="7236000" />
       <workItem from="1664173769839" duration="11738000" />
       <workItem from="1664192082163" duration="20024000" />
-      <workItem from="1664296679556" duration="6190000" />
+      <workItem from="1664296679556" duration="9616000" />
     </task>
     <task id="LOCAL-00001" summary="Status changing tab implemented">
       <created>1664178636891</created>
@@ -129,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664227911363</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="login screen done">
+      <created>1664302875362</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664302875362</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +169,8 @@
     <MESSAGE value="Status changing tab implemented" />
     <MESSAGE value="Card UI redefined." />
     <MESSAGE value="List Implemented.&#10;Overall UI defined" />
-    <option name="LAST_COMMIT_MESSAGE" value="List Implemented.&#10;Overall UI defined" />
+    <MESSAGE value="login screen done" />
+    <option name="LAST_COMMIT_MESSAGE" value="login screen done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Kanban$Kanban.coverage" NAME="Kanban Coverage Results" MODIFIED="1663911737317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

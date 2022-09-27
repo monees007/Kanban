@@ -1,4 +1,5 @@
 from main import app
+from model import dbs
 
 
 def showcard():
@@ -15,9 +16,9 @@ def new():
     pass
 
 
-def create_list():
-    pass
+def create_list(title, mid, color):
+    dbs.execute(f"insert into list(title, id, color) values({title},{color});")
 
 
 def delete_list():
-    pass
+

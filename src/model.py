@@ -6,16 +6,16 @@ print("DB connected")
 dbs.execute(
     ''' create table card(
         title Varchar,
-        # id int primary key not null,
+        id int primary key not null,
         content varchar,
         status boolean,
         deadline date,
-        parent_list int,
+        parent_list integer,
         date_created date);''')
 
 dbs.execute(''' create table list(
         title Varchar,
-        id int primary key not null,
+        id integer primary key autoincrement not null,
         color VARCHAR, 
 );
 

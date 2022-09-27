@@ -1,7 +1,12 @@
 .xcard {
     margin: 50px;
-    background: #AEA79F;
-    color: #111111;
+    /*background: #AEA79F;*/
+    /*background-image: url(/img/site-background-image.png);*/
+    /*background-repeat: repeat;*/
+    background-color: #333333;
+    box-shadow: 0 10px 24px hsla(0, 0%, 0%, 0.05), 0 20px 48px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.1);;
+
+    color: #ffffff;
     font-family: "JetBrains Mono", monospace;
     font-size: 12px;
     padding: 40px;
@@ -9,7 +14,8 @@
     border-radius: 25px;
     width: 64%;
     height: auto;
-    top: 0;
+
+    top: 100px;
     display: flex;
     flex-direction: column;
 
@@ -17,19 +23,21 @@
     justify-content: flex-start;
 
 }
-
+.ii{
+    font-variation-settings: 'FILL' 1;
+}
 .closebar {
     height: 35px;
     width: 35px;
-    top:45px;
-    right:40px;
+    top: 45px;
+    right: 40px;
     position: absolute;
 
     float: right;
     padding-top: 5px;
     padding-right: 5px;
 
-    background: #e95420;
+    background: teal;
     color: #ffffff;
     display: flex;
     border-radius: 20px;
@@ -66,8 +74,9 @@
 
 .sticker {
     font-size: 15px;
-    background: #bEb7aF;
+    background: #555555;
     border-width: 0;
+    color: white;
     padding: 10px;
     margin-top: 10px;
     border-radius: inherit;
@@ -77,7 +86,7 @@
 
 #title {
     font-size: 25px;
-    background: #bEb7aF;
+    background: #555555;
     border-width: 0;
     padding: 10px;
 
