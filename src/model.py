@@ -4,19 +4,26 @@ dbs = sqlite3.connect('base.db')
 print("DB connected")
 
 dbs.execute(
+    "create table owner( name TEXT, email TEXT)"
+)
+dbs.execute(
     ''' create table card(
-        title Varchar,
-        id int primary key not null,
-        content varchar,
-        status boolean,
-        deadline date,
+        title TEXT,
+        id integer primary key not null,
+        content TEXT,
+        status INTEGER,
+        deadline DATETIME,
         parent_list integer,
-        date_created date);''')
+        
+        Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(parent_list) references list(id)
+        );''')
 
 dbs.execute(''' create table list(
-        title Varchar,
-        id integer primary key autoincrement not null,
-        color VARCHAR, 
-);
+        title TEXT,
+        id integer primary key not null,
+        color TEXT,
+        owner TEXT,
+                FOREIGN KEY(owner) references owner(email));
 
 ''')

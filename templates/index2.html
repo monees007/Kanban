@@ -6,14 +6,19 @@
     <link rel="stylesheet" href="../static/card.css" type="text/css"/>
     <link rel="stylesheet" href="../static/style.css" type="text/css"/>
     <link rel="stylesheet" href="../static/statusbar.css" type="text/css"/>
+    <script src="controller.js"></script>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Ubuntu">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script>function newfd(el){
+    document.getElementById(el).style.display="flex";
+}</script>
 </head>
 <body>
-<form class="xcard">
+<form id="new_card" style="display: none" class="xcard">
     <div>
+         <span class="title">Add a Card</span>
         <div class="closebar">
             <input type="submit" class="btn" id="btn_rst">
             <label class="set1" for="btn_rst">
@@ -73,6 +78,34 @@
 
 
 </form>
+<form id="new_list" style="display: none" class="xcard">
+    <div>
+        <span class="title">Create new List</span>
+        <div class="closebar">
+            <input type="submit" class="btn" id="btn_rst">
+            <label class="set1" for="btn_rst">
+                <span class="btn-lbl">Exit Without Saving</span>
+                <span id="icon-off" class="btnicn material-symbols-outlined">cancel</span>
+            </label>
+
+            <input type="submit" class="btn" id="btn_sbmt">
+            <label class="set1" for="btn_sbmt">
+                <span class="btn-lbl"> Save and Exit</span>
+                <span class="btnicn material-symbols-outlined">check_circle</span>
+            </label>
+        </div>
+        <input class="sticker" type="text" id="title" class="title" placeholder="title"/></div>
+
+    <div class="sticker">
+        <label>Colour
+            <select id="clist">
+                <option value="">Colour</option>
+            </select>
+        </label>
+    </div>
+
+
+</form>
 <div class="sub-header"> Kanban by monees007</div>
 <div class="header">
     Hi Simaalee
@@ -112,9 +145,12 @@
 
         </div>
         <hr>
-        <div class="bab">
+<div class="bar-x">
+            <div class="bab" onclick="newfd('new_card')">
             <span class="material-symbols-outlined">add</span>
         </div>
+
+</div>
     </div>
     <div class="leaf">
         Energise your engineers
@@ -125,7 +161,7 @@
         That’s why Ubuntu supports the fastest, biggest and most successful digital operations.
     </div>
 </div>
-<div class="fab">
+<div class="fab" onclick="newfd('new_list')">
     <span class="material-symbols-outlined">add</span>
 </div>
 </body>

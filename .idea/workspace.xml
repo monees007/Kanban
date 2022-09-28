@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d4ddcf8-36d9-43d3-ab81-6ef9407b5cf5" name="Changes" comment="login screen done">
-      <change afterPath="$PROJECT_DIR$/.idea/Kanban.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/site-background-image.png" afterDir="false" />
+    <list default="true" id="0d4ddcf8-36d9-43d3-ab81-6ef9407b5cf5" name="Changes" comment="ui improved&#10;databaase started">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/base.db" beforeDir="false" afterPath="$PROJECT_DIR$/model/base.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
@@ -44,6 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -118,7 +118,7 @@
       <workItem from="1663911471301" duration="7236000" />
       <workItem from="1664173769839" duration="11738000" />
       <workItem from="1664192082163" duration="20024000" />
-      <workItem from="1664296679556" duration="9616000" />
+      <workItem from="1664296679556" duration="16842000" />
     </task>
     <task id="LOCAL-00001" summary="Status changing tab implemented">
       <created>1664178636891</created>
@@ -148,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664302875362</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ui improved&#10;databaase started">
+      <created>1664306316358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664306316358</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +177,8 @@
     <MESSAGE value="Card UI redefined." />
     <MESSAGE value="List Implemented.&#10;Overall UI defined" />
     <MESSAGE value="login screen done" />
-    <option name="LAST_COMMIT_MESSAGE" value="login screen done" />
+    <MESSAGE value="ui improved&#10;databaase started" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui improved&#10;databaase started" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Kanban$Kanban.coverage" NAME="Kanban Coverage Results" MODIFIED="1663911737317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
